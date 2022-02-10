@@ -1,0 +1,77 @@
+tsc --target ES5 --noEmitOnError .\Customer.ts
+_____________________________________________________________
+
+tsc --init	-> for auto-generate typescript complie file as tsconfig.json 
+______________________________________________________________
+
+tsc --build --clean  -> for removing exisiting auto generated .js files.
+_____________________________________________________________
+
+Parameter properties: 
+You can create shortcut constructor in typscript using private in the parameter section before variable name.
+Before :
+	private _firstName: String;
+	private _lastName: String;
+
+	constructor(fname:String, lname:String){
+		this._firstName = fname;
+		this._lastName = lname;
+	}
+After using shortcut:
+	constructor(private _firstName:String, private _lastName:String){
+	}
+_______________________________________________________________________
+
+Angular CLI:
+> npm install -g @angular/cli
+> ng version
+> ng help
+
+Create new project with Angular CLI:
+> ng new <project-name>
+> ng new sales-project
+
+Generare a new component:
+> ng generate component <nameofComponent>
+> ng generate component sales-person-list
+
+________________________________________________________________________
+
+> ng serve 
+1. Build the app (complie / tranpile)
+2. start the server.
+3. Watches the source files.
+4. Rebuilds the apps when source is updated (hot reload)
+
+by default listens on port 4200
+http://localhost:4200
+
+> ng serve --open
+Same as above but also opens a web browser to http://localhost:4200
+
+> ng serve --port 5100
+Change the server port
+
+> ng serve --port 5100 --open
+opens a web browser to http://localhost:5100	
+________________________________________________________________________
+
+
+Angular Project Development Process step by step :
+1. Create new project	->	ng new sales-project
+2. Update main template page	->	remove exising code from app.component.html file.
+3. Generate a new component		->	ng generate component sales-person-list
+4. Add new component selector to app templeate page		->	copy selector name from sales-person-list.component.ts file and paste in app.component.html file as html tag.
+5. Generate a SalesPerson class	inside component	->	ng generate class sales-person-list/SalesPerson
+6. create contuctor in SalesPerson class with firstName field.
+7. create an array in sales-person-list-component.ts file.
+8. Print the value in sales-person-list-component.html file.	->	{{salesPersonList[0].firstName}}	
+
+________________________________________________________________________
+
+Apply Bootstrap in Angular step by step :
+1. Get links for remote Bootstrap files 	https://getbootstrap.com/
+2. Add links in index.html
+3. Apply Bootstrap CSS styles class in component HTML template (app.component.html file).
+4. Apply Bootstrap CSS styles class in component HTML Table.
+5. Update Typescript component file to reference Bootstrap HTML template.
