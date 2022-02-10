@@ -10,9 +10,9 @@ export class SalesPersonListComponent implements OnInit {
 
   // create an array of object.
   salesPersonList : SalesPerson[] = [
-    new SalesPerson("Ram","Sundar"),
-    new SalesPerson("Sham","Varma"),
-    new SalesPerson("Yusuf","Khan"),
+    new SalesPerson("Ram","Sundar",10000),
+    new SalesPerson("Sham","Varma",4000),
+    new SalesPerson("Yusuf","Khan",7000),
   ];
 
   constructor() { }
